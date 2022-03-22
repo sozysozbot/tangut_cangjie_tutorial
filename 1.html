@@ -1,0 +1,65 @@
+<!doctype html>
+<head>
+	<meta charset="utf-8">
+	<title>西夏倉頡チュートリアル part 1 ―― 環境構築</title>
+	
+	<style type="text/css">
+
+	@font-face {
+		font-family: 'TangutYinchuanWoff';
+		src: url('./TangutYinchuan.woff') format('woff');
+	}
+	[lang = "txg"]	{
+		font-family: "Tangut Yinchuan", "Tangut N4694", "New Tangut", "New Tangut Std", "Tangut TWU", "TH-Tshyn-P1", "TH-Feon-B", "Noto Serif Tangut", 'TangutYinchuanWoff';
+	}
+	</style>
+</head>
+<body style="max-width: 60%; margin: 0 auto; background-color: #d4fdf5;" lang="ja">
+<h2 style="color: rgb(121, 16, 16);">西夏倉頡チュートリアル part 1 ―― 環境構築</h2>
+<div style="text-align: right; margin-bottom: 50px;">著: hsjoihs (Twitter: <a href="https://twitter.com/hsjoihs">@hsjoihs</a>, <a href="https://twitter.com/sosoBOTpi">@sosoBOTpi</a>)</div>
+<div style="display: flex; justify-content: space-between; font-size: 120%;">
+<div><a href="index.html">← 前頁</a></div>
+<div><a href="2.html">次頁 →</a></div>
+</div>
+<h3>0. 「環境構築」とは</h3>
+<p>残念ながら、お使いのパソコンではそのままでは西夏倉頡を使うことができません。暇とやる気があれば、環境構築せずともオンラインで西夏倉頡を使える Web アプリを実装してみようかとも思いますが、2022年3月22日現在まだ実装していないので、以下に示す指示を読んで西夏倉頡を使うための準備をしていきましょう。</p>
+<h3>1. フォントの導入</h3>
+<p>2016 年の Unicode 9.0 で西夏文字が Unicode に収録されました。しかし、Unicode への収録というのはあくまで「この文字を電子的に表すには、こうやって表すこととする」<sup><a href="#footnote1">[1]</a></sup> という約束を定めただけであり、それを実際に表示するにはフォントが必要です。当サイトでは Web フォントを指定しているので、フォントがお使いのパソコンやスマホなどにインストールされていなくとも、「<span lang="txg">𗼇𘂜𗟲𗿳𗖵𘃎𘇂𗊏</span>」や「<span lang="txg">𗹦𗼻𗯨𗐯𗂥，𗾔𗼑𗉘𘝨𗜓。</span>」などと正しく表示できるようになっているはずですが、次に入れる IME 内で変換候補一覧が正しく表示できるようにするためにも、英語版 Wikipedia の<a href="https://en.wikipedia.org/wiki/List_of_Tangut_books">西夏語の本一覧</a>だったり、<a href="https://en.wikipedia.org/wiki/Tangut_(Unicode_block)">Unicode に載っている西夏文字の一覧</a>だったりといったページを正しく表示するためにも、フォントを導入しておいた方がよいでしょう。</p>
+
+<img src="screenshot/correctly_rendered.png" style="max-width: 50%;" ><img src="screenshot/incorrectly_rendered.png" style="max-width: 50%;" >
+<div style="display: flex; justify-content: space-around; font-size: 90%; width: 100%;">
+	<div style="width: 50%; text-align: center;">正常な表示</div>
+	<div style="width: 50%; text-align: center;">文字化け</div>
+</div>
+
+<p>さて、フォントを導入するにはどうすればいいかというと、まず <a href="https://www.babelstone.co.uk/Fonts/Yinchuan.html">Tangut Yinchuan</a> のサイトに行き、下の方にある「Download Tangut Yinchuan」をクリックします。</p>
+
+<img src="screenshot/click_here.png" style="max-width: 100%;" />
+
+<p>Windows の場合、そうしてダウンロードしたファイルを</p>
+
+<img src="screenshot/downloaded.png" style="max-width: 100%;" />
+
+<p>ダブルクリックして開き、「インストール」をクリックすることでフォントが入るはずです。</p>
+
+<img src="screenshot/font_window.png" style="max-width: 100%;" />
+
+<p>暇とやる気があれば、Mac とかでのフォント導入方法も書くかもしれません。それまでは、「Mac フォント 追加」とかで調べて頂ければと思います。</p>
+
+<h3>2. RIME</h3>
+<p style="font-weight: bold; font-size: 150%; color: magenta">未執筆</p>
+
+<h3>3. 試してみよう</h3>
+
+<textarea lang="txg" cols="18" rows="5" style="font-size: 300%; display: block; margin: 0 auto;">
+𗼇𘂜𗟲𗿳𗖵𘃎𘇂𗊏
+</textarea>
+<p>入力を RIME に切り替えて、「ALMX FDHQK MDSNN ZTLP SVYKU RKYP NQANQ EYX」と入力していくことで、前述の「<span lang="txg">𗼇𘂜𗟲𗿳𗖵𘃎𘇂𗊏</span>」が入力できることをご確認ください。次回からは、この入力の仕組みの詳細を具体的に見ていきます。</p>
+<div style="display: flex; justify-content: space-between; font-size: 120%;">
+	<div><a href="index.html">← 前頁</a></div>
+	<div><a href="2.html">次頁 →</a></div>
+</div>
+<hr>
+<p id="footnote1">[1] 実際には Unicode への収録で文字に結びつくのは「コードポイント」と呼ばれるものであり、実際にはそのコードポイントに対して文字符号化スキーム (character encoding scheme) を適用したものが、実際にファイルなどに記録される 0 や 1 の列となります。しかしながら、今回の話をする上でこれは全く関係ないので、気にしなくて構いません。</p>
+<!-- <p style="font-weight: bold; font-size: 150%; color: magenta">未執筆</p> -->
+</body>
