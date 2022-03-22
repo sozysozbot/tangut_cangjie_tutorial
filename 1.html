@@ -53,7 +53,18 @@
 <p>西夏倉頡のための定義ファイルは、<a href="https://twitter.com/hulenkius">hulenkius</a> さんという方が用意してくださったものがあるので、そちらを使っていきます。</p>
 <p>ということで、まずは RIME をインストールします。<a href="https://rime.im/download/">https://rime.im/download/</a> を開いて、Windows や Mac なら「下載」と書いてあるリンクをクリックすることでダウンロードが始まるはずです。ダウンロードしたインストーラーを起動することで、RIME がインストールされるはずです。</p>
 
-<p>そうしたら、<a href="https://raw.githubusercontent.com/Hulenkius/rime_tangutcjkk/main/tangutcjkk.dict.yaml">tangutcjkk.dict.yaml</a> と <a href="https://raw.githubusercontent.comHulenkius/rime_tangutcjkk/main/tangutcjkk.schema.yaml">tangutcjkk.schema.yaml</a> をダウンロードして、設定フォルダにコピーします。設定フォルダは、Windows なら <code>%APPDATA%\Rime</code>、Mac なら <code>~/Library/Rime</code>、Linux なら <code>~/.config/ibus/rime</code> に位置しているはずです。</p>
+<p>そうしたら、<a href="https://github.com/Hulenkius/rime_tangutcjkk">hulenkius さんのリポジトリを開き</a>、緑色の「Code」というところをクリックし、Download Zip をクリック。</p>
+
+<img src="screenshot/download_zip.png" style="max-width: 100%;" />
+
+<p>ダウンロードしたファイルを右クリック → 「すべて展開」し、</p>
+
+<img src="screenshot/unzip.png" style="max-width: 100%;" />
+
+<p>tangutcjkk.dict.yaml と tangutcjkk.schema.yaml を選択して、</p>
+<img src="screenshot/unzipped_folder.png" style="max-width: 100%;" />
+
+<p>設定フォルダにコピーします。設定フォルダは、Windows なら <code>%APPDATA%\Rime</code>、Mac なら <code>~/Library/Rime</code>、Linux なら <code>~/.config/ibus/rime</code> に位置しているはずです。</p>
 
 <p>最後に、設定フォルダ内の default.custom.yaml の schema_list 内に <code>- {schema: tangutcjkk}</code> の行を足して、「Ctrl + Alt + `」で更新（日本語キーボードだと上手く行かない場合があり、その際は言語バーを右クリックして「重新部署」をクリックすることで対処してください）。</p>
 
