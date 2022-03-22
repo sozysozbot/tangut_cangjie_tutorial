@@ -1,0 +1,68 @@
+# Rime schema settings
+# encoding: utf-8
+
+schema:
+  name: Tangut Cangjie
+  schema_id: tangutcj
+  version: "0.1"
+  author:
+    - KAWASAKI Keigo
+    - hulenkius
+  description: |
+    Tangut Cangjie Input Method
+
+switches:
+  - name: ascii_mode
+    reset: 0
+    states: [ 西夏, 西文 ]
+  - name: full_shape
+    states: [ 半角, 全角 ]
+  - name: ascii_punct
+    states: [ 。，, ．， ]
+
+
+engine:
+  processors:
+    - ascii_composer
+    - recognizer
+    - key_binder
+    - speller
+    - punctuator
+    - selector
+    - navigator
+    - express_editor
+  segmentors:
+    - ascii_segmentor
+    - matcher
+    - abc_segmentor
+    - punct_segmentor
+    - fallback_segmentor
+  translators:
+    - punct_translator
+    - reverse_lookup_translator
+    - table_translator
+  filters:
+    - simplifier
+    - uniquifier
+
+speller:
+  alphabet: zyxwvutsrqponmlkjihgfedcbaABCDEFGHIJKLMNOPQRSTUVWXYZ;
+
+translator:
+  dictionary: tangutcj
+  prism: tangutcj
+  enable_sentence: true
+  enable_encoder: true
+  encode_commit_history: true
+punctuator:
+  import_preset: symbols
+
+key_binder:
+  import_preset: default
+
+recognizer:
+  import_preset: default
+style: 
+  font_face: "Tangut Yinchuan"
+# font_face: "Tangut N4694,Tangut Yinchuan,New Tangut,New Tangut Std,Tangut TWU,TH-Tshyn-P1,TH-Feon-B,Noto Serif Tangut"
+  font_point: 35

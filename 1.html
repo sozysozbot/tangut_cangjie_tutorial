@@ -47,19 +47,29 @@
 <p>暇とやる気があれば、Mac とかでのフォント導入方法も書くかもしれません。それまでは、「Mac フォント 追加」とかで調べて頂ければと思います。</p>
 
 <h3>2. RIME</h3>
-<p style="font-weight: bold; font-size: 150%; color: magenta">未執筆</p>
+<p>RIME は、主に中国語圏で人気の IME です。オープンソフトウェアとなっており、設定ファイルさえ書けば高いカスタマイズ性を誇ることから、中国語およびそれに類する書記体系の独自 IME が欲しい際には欠かせないソフトウェアです<sup><a href="#footnote2">[2]</a></sup>。</p>
+<p>西夏倉頡のための定義ファイルは、<a href="https://twitter.com/hulenkius">hulenkius</a> さんという方が用意してくださったものがあるので、そちらを使っていきます。</p>
+<p>ということで、まずは RIME をインストールします。<a href="https://rime.im/download/">https://rime.im/download/</a> を開いて、Windows や Mac なら「下載」と書いてあるリンクをクリックすることでダウンロードが始まるはずです。ダウンロードしたインストーラーを起動することで、RIME がインストールされるはずです。</p>
 
+<p>そうしたら、<a href="https://raw.githubusercontent.com/sozysozbot/tangut_cangjie_tutorial/master/tangutcj.dict.yaml">tangutcj.dict.yaml</a> と <a href="https://raw.githubusercontent.com/sozysozbot/tangut_cangjie_tutorial/master/tangutcj.schema.yaml">tangutcj.schema.yaml</a> をダウンロードして、設定フォルダにコピーします。設定フォルダは、Windows なら <code>%APPDATA%\Rime</code>、Mac なら <code>~/Library/Rime</code>、Linux なら <code>~/.config/ibus/rime</code> に位置しているはずです。</p>
+
+<p>最後に、設定フォルダ内の default.custom.yaml の schema_list 内に <code>- {schema: tangutcj}</code> の行を足して、「Ctrl + Alt + `」で更新（日本語キーボードだと上手く行かない場合があり、その際は言語バーを右クリックして「重新部署」をクリックすることで対処してください）。</p>
+
+<p>そうしたら「Ctrl + `」または「F4」で入力方式の選択メニューを出し、Tangut Cangjie を選ぶことで、西夏倉頡で入力ができるようになっているはずです。なお、日本語キーボード Windows の場合、「`」が半角全角キーに対応していることがあります。</p>
+
+<img src="screenshot/mode_selection.png" style="max-width: 50%;">
 <h3>3. 試してみよう</h3>
 
 <textarea lang="txg" cols="18" rows="5" style="font-size: 300%; display: block; margin: 0 auto;">
 𗼇𘂜𗟲𗿳𗖵𘃎𘇂𗊏
 </textarea>
-<p>入力を RIME に切り替えて、「ALMX FDHQK MDSNN ZTLP SVYKU RKYP NQANQ EYX」と入力していくことで、前述の「<span lang="txg">𗼇𘂜𗟲𗿳𗖵𘃎𘇂𗊏</span>」が入力できることをご確認ください。次回からは、この入力の仕組みの詳細を具体的に見ていきます。</p>
+<p>入力を RIME に切り替えて、「ALMX FDHQK MDSNN ZTLP SVYKU RKYP NQANQ EYX」と入力していくことで、前述の「<span lang="txg">𗼇𘂜𗟲𗿳𗖵𘃎𘇂𗊏</span>」が入力できることをご確認ください。次回からは、西夏倉頡の仕組みを具体的に見ていきます。</p>
 <div style="display: flex; justify-content: space-between; font-size: 120%;">
 	<div><a href="index.html">← 前頁</a></div>
 	<div><a href="2.html">次頁 →</a></div>
 </div>
 <hr>
 <p id="footnote1">[1] 実際には Unicode への収録で文字に結びつくのは「コードポイント」と呼ばれるものであり、実際にはそのコードポイントに対して文字符号化スキーム (character encoding scheme) を適用したものが、実際にファイルなどに記録される 0 や 1 の列となります。しかしながら、今回の話をする上でこれは全く関係ないので、気にしなくて構いません。</p>
+<p id="footnote2">[2] 逆にいうと、一般的な日本語入力のような比較的複雑な漢字仮名変換に対処することを想定として設計されたソフトウェアではありません。</p>
 <!-- <p style="font-weight: bold; font-size: 150%; color: magenta">未執筆</p> -->
 </body>
