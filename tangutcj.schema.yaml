@@ -63,6 +63,5 @@ key_binder:
 recognizer:
   import_preset: default
 style: 
-  font_face: "Tangut Yinchuan"
-# font_face: "Tangut N4694,Tangut Yinchuan,New Tangut,New Tangut Std,Tangut TWU,TH-Tshyn-P1,TH-Feon-B,Noto Serif Tangut"
+  font_face: "Tangut N4694"
   font_point: 35

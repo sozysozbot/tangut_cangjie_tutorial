@@ -44,6 +44,8 @@
 
 <img src="screenshot/font_window.png" style="max-width: 100%;" />
 
+<p>同様にして、もう一個、<a href="https://drive.google.com/file/d/1IMdZNbUIoP0a4PRdvx6-JOI7TqU3Fqn2/view">Tangut N4694</a> というフォントもダウンロードしてインストールしておいてください。右上の下矢印ボタンでダウンロードできるはずです。</p>
+
 <p>暇とやる気があれば、Mac とかでのフォント導入方法も書くかもしれません。それまでは、「Mac フォント 追加」とかで調べて頂ければと思います。</p>
 
 <h3>2. RIME</h3>
@@ -51,9 +53,9 @@
 <p>西夏倉頡のための定義ファイルは、<a href="https://twitter.com/hulenkius">hulenkius</a> さんという方が用意してくださったものがあるので、そちらを使っていきます。</p>
 <p>ということで、まずは RIME をインストールします。<a href="https://rime.im/download/">https://rime.im/download/</a> を開いて、Windows や Mac なら「下載」と書いてあるリンクをクリックすることでダウンロードが始まるはずです。ダウンロードしたインストーラーを起動することで、RIME がインストールされるはずです。</p>
 
-<p>そうしたら、<a href="https://raw.githubusercontent.com/sozysozbot/tangut_cangjie_tutorial/master/tangutcj.dict.yaml">tangutcj.dict.yaml</a> と <a href="https://raw.githubusercontent.com/sozysozbot/tangut_cangjie_tutorial/master/tangutcj.schema.yaml">tangutcj.schema.yaml</a> をダウンロードして、設定フォルダにコピーします。設定フォルダは、Windows なら <code>%APPDATA%\Rime</code>、Mac なら <code>~/Library/Rime</code>、Linux なら <code>~/.config/ibus/rime</code> に位置しているはずです。</p>
+<p>そうしたら、<a href="https://raw.githubusercontent.com/Hulenkius/rime_tangutcjkk/main/tangutcjkk.dict.yaml">tangutcjkk.dict.yaml</a> と <a href="https://raw.githubusercontent.comHulenkius/rime_tangutcjkk/main/tangutcjkk.schema.yaml">tangutcjkk.schema.yaml</a> をダウンロードして、設定フォルダにコピーします。設定フォルダは、Windows なら <code>%APPDATA%\Rime</code>、Mac なら <code>~/Library/Rime</code>、Linux なら <code>~/.config/ibus/rime</code> に位置しているはずです。</p>
 
-<p>最後に、設定フォルダ内の default.custom.yaml の schema_list 内に <code>- {schema: tangutcj}</code> の行を足して、「Ctrl + Alt + `」で更新（日本語キーボードだと上手く行かない場合があり、その際は言語バーを右クリックして「重新部署」をクリックすることで対処してください）。</p>
+<p>最後に、設定フォルダ内の default.custom.yaml の schema_list 内に <code>- {schema: tangutcjkk}</code> の行を足して、「Ctrl + Alt + `」で更新（日本語キーボードだと上手く行かない場合があり、その際は言語バーを右クリックして「重新部署」をクリックすることで対処してください）。</p>
 
 <p>そうしたら「Ctrl + `」または「F4」で入力方式の選択メニューを出し、Tangut Cangjie を選ぶことで、西夏倉頡で入力ができるようになっているはずです。なお、日本語キーボード Windows の場合、「`」が半角全角キーに対応していることがあります。</p>
 
